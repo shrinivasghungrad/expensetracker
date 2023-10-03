@@ -1,5 +1,6 @@
 import React from "react";
 import Expenses from "./components/Expenses";
+//mainfile
 
 const App = () => {
   //array of object
