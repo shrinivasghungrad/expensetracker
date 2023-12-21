@@ -1,45 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import Expenses from "./components/Expenses/Expenses";
-import NewExpense from './components/NewExpense/NewExpense';
+import NewExpense from "./components/NewExpense/NewExpense";
 
+
+let Dummy_Expense = [
+  
+];
 
 const App = () => {
+  const [expenses,setExpenses]= useState(Dummy_Expense);
   //array of object
-  let expenses = [
-    {
-      id: "e1",
-      title: "College fee",
-      amount: 800,
-      date: new Date(2023, 9, 26),
-    },
-    {
-      id: "e2",
-      title: "Food",
-      amount: 250,
-      date: new Date(2023, 10, 26),
-    },
-    {
-      id: "e3",
-      title: "Travel",
-      amount: 250,
-      date: new Date(2023, 10, 26),
-    },
-    {
-      id: "e1",
-      title: "Books",
-      amount: 100,
-      date: new Date(2023, 12, 27),
-    },
-  ];
+  fetch('http:localhost/sample-api/api/read.php').then(
+    response=>{
+      return response.json();
 
-   const addExpenseHandler=(expense)=>{
-    console.log(expense);
-   };
+    }
+    
+  ).then(
+    data=>{
+      console.log(data);
+      setExpenses(data)
+    }
+  );
+  
+  const addExpenseHandler = (expense) => {
+    const updatedExpense = [expense,...expenses];
+    setExpenses(updatedExpense);
+  }; //line 35 expense variable recive data from NewExpense which is child and
+    // data is collecte in app.js which is parent and for this process send data from child to parent 
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses item={expenses} />
-
     </div>
   );
 };
