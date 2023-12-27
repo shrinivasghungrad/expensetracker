@@ -33,7 +33,7 @@ const [enteredDate,setEnteredDate]= useState('');
         console.log(expenseData);
         setEnteredTitle('');
         setEnteredAmount('');
-        setEnteredDate('');  //these tree line are used to to blank the file after enter data and submit 
+        setEnteredDate('');  //these three line are used to to blank the file after enter data and submit 
                              //means data is collected and after submit filed is clear this process is called two-way binding
   };
   
