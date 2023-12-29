@@ -8,3 +8,10 @@
   border-radius: 12px ;
 
 }
+@media only screen and (max-width: 600px) {
+  .expenses{
+  width: 50rem;
+  
+  max-width: 95%;
+  }
+}

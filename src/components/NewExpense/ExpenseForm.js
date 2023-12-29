@@ -41,7 +41,7 @@ const [enteredDate,setEnteredDate]= useState('');
     <form onSubmit={submitHandler}>
       <div className='new-expense__controls'>
         <div className='new-expense__control'>
-          <label>title</label>
+          <label>Title</label>
           <input type='text' value={enteredTitle} onChange={titleChangeHandler}></input>
 
         </div>

@@ -1,0 +1,35 @@
+.login-form{
+background-color: lightblue;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+width: 50rem;
+max-width: 95%;
+border-radius: 12px;
+/* border-color: 0 1px 8px rgba(0, 0,0, 0.25); */
+margin: 2rem auto;
+}
+.form-control input{
+    font: inherit;
+    padding: 0.5rem;
+    border: 1 px solid #ccc;
+    width: 20rem;
+}
+.form-group {
+    font: inherit;
+    padding: 0.5rem;
+    border: 1 px solid #ccc;
+    width: 20rem;
+
+
+}
+.already-register{
+    display: flex;
+    flex-direction: row;
+}
+.login-form-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center          ;
+}

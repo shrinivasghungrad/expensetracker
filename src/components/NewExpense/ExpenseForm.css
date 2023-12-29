@@ -16,3 +16,17 @@
 .new-expense__action{
     text-align: right;
 }
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .new-expense__control {
+        width: 100%; /* Make the control div full width on smaller screens */
+    }
+
+    .new-expense__action {
+        text-align: left; /* Adjust alignment for mobile screens */
+        margin-top: 1rem; /* Add margin for better spacing */
+    }
+}
